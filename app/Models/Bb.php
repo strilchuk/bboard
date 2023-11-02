@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Bb extends Model
 {
 //    use HasFactory; // нужен для тестов
-    protected $fillable = ['title', 'content', 'price'];
+    protected $fillable = ['title', 'content', 'price']; // Поля доступные для массового присваивания, т.е через ассоциативный массив
+    // например $bb = $bb->create(['title' => 'Пылесос', 'content' => 'Старый ржавый, без шланга', 'price' => 1000]);
 }
