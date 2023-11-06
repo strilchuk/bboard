@@ -10,6 +10,18 @@
 </head>
 <body>
 <div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="{{route('index')}}" class="navbar-brand me-auto">&nbsp;Главная&nbsp;</a>
+            <a href="{{route('register')}}" class="nav-item nav-link">&nbsp;Регистрация&nbsp;</a>
+            <a href="{{route('login')}}" class="nav-item nav-link">&nbsp;Вход&nbsp;</a>
+            <a href="{{route('home')}}" class="nav-item nav-link">&nbsp;Мои объявления&nbsp;</a>
+            <form action="{{route('logout')}}" method="POST" class="form-inline">
+                @csrf
+                <input type="submit" class="btn btn-danger" value="Выход">
+            </form>
+        </div>
+    </nav>
     <h1 class="my-3 text-center">Объявления</h1>
     @yield('content')
 </div>
